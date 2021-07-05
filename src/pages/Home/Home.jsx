@@ -9,8 +9,12 @@ import {
 const Home = () => {
   return (
     <>
-      <HeadingText> Prototype </HeadingText>
-      <WordTyper initialPause="1100" text=".sync()"></WordTyper>
+      <div style={{display:"flex"}}>
+        <HeadingText> Prototype </HeadingText>
+        <div style={{marginTop:"2.75rem"}}>
+          <WordTyper></WordTyper>
+        </div>
+      </div>
     </>
   )
 }
