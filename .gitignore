@@ -24,3 +24,4 @@ yarn-error.log*
 
 # website mockups
 /templates
+.colors
