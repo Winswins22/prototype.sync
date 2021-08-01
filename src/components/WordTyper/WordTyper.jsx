@@ -14,7 +14,7 @@ const WordTyper = () => {
 
   setTimeout(() => {
     setDisplay(true)
-  }, 1000)
+  }, 250)
 
   setTimeout(() => {
     setFinish(true)
