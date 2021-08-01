@@ -23,3 +23,7 @@ export const HeadingText = styled.div`
 export const HeadingGreyText = styled(HeadingText)`
   color: grey;
 `
+
+export const PageWrapper = styled.div`
+  margin-left: 4vw;
+`
