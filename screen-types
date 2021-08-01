@@ -1,2 +1,2 @@
-mobile: <960px
-laptop: >=960px
+mobile: <1280px
+laptop/pc: >=1280px

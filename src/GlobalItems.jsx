@@ -25,8 +25,6 @@ export const HeadingGreyText = styled(HeadingText)`
 `
 
 export const PageWrapper = styled.div`
-  margin-left: 4vw;
-
   margin-top: 5vh;
 `
 

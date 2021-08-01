@@ -26,7 +26,7 @@ const Home = () => {
     <PageWrapper>
 
       <div style={{display:"flex"}}>
-        <HeadingText> Prototype </HeadingText>
+        <HeadingText data-aos="fade-in"> Prototype </HeadingText>
         <div style={{marginTop:"2.75rem"}}>
           <WordTyper></WordTyper>
         </div>
@@ -46,7 +46,7 @@ const Home = () => {
 
       <div data-aos-delay="500" data-aos="fade-left">
         <div>
-          <Button variant="contained" color="primary" style={{width:"20vw", height:"6vh"}}>
+          <Button variant="contained" color="primary" style={{width:"20vw", height:"6vh", fontSize:"1.4rem"}}>
             Create Protoype!
           </Button>
         </div>
