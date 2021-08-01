@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/WordTyper/WordTyperStyling.css"],"names":[],"mappings":"AAAA,UACE,UAAW,CACX,gBACF","file":"main.b7087375.chunk.css","sourcesContent":[".typeText {\n  color: grey;\n  font-size: 1.5rem;\n}"]}
