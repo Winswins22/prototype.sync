@@ -8,9 +8,20 @@ import {
   ListItemText
 } from '@material-ui/core'
 
-import {makeStyles} from '@material-ui/core/styles'
+import {
+  CenteredList,
+  CenteredIcon,
+  CenteredItem,
+  LargeListItemText
+} from './SidebarElems'
+
+import Divider from '@material-ui/core/Divider'
+
+import { makeStyles } from '@material-ui/core/styles'
 
 // import { MdKeyboardArrowRight } from 'react-icons/md';
+
+import { VscGithubInverted } from 'react-icons/vsc'
 
 const useStyles = makeStyles({
   drawer: {
@@ -31,13 +42,33 @@ const Sidebar = () => {
   return(
     <>
       <MUIDrawer variant="permanent" className={classes.drawer}>
+
         <List>
-            {prototypeItems.map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
+          <ListItem>
+            <ListItemText primary={"Prototype.sync()"} secondary={"v 0.1"}/>
+          </ListItem>
+        </List>
+
+        <Divider></Divider>
+
+        <List>
+          {prototypeItems.map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemText secondary={text} />
+            </ListItem>
+          ))}
+        </List>
+
+        <Divider></Divider>
+
+        <List>
+          <CenteredItem component="a" href="https://github.com/Winswins22/prototype.sync" target="_blank" rel="noopener">
+            <ListItemIcon>
+              <VscGithubInverted size={50}></VscGithubInverted>
+            </ListItemIcon>
+          </CenteredItem>
+        </List>
+        
       </MUIDrawer>
     </>
   )
