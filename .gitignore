@@ -24,7 +24,6 @@ yarn-error.log*
 
 # website mockups
 /templates
-.colors
 
 # notes
-.screen-types
+/notes
