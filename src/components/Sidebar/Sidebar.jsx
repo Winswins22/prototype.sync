@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+import { Link } from 'react-router-dom'
+
 import { 
   Drawer as MUIDrawer,
   List,
@@ -34,9 +36,18 @@ const Sidebar = () => {
   const classes = useStyles()
 
   const prototypeItems = [
-    "Create/Join Prototype",
-    "Enter tasks or Prototype ID",
-    "Prototype Timeline"
+    {
+      text:"Create/Join Prototype",
+      path:"/"
+    },
+    {
+      text:"Enter tasks for your Prototype",
+      path:"/tasks"
+    },
+    {
+      text:"Prototype Timeline",
+      path:"/timeline"
+    }
   ]
 
   return(
@@ -52,11 +63,19 @@ const Sidebar = () => {
         <Divider></Divider>
 
         <List>
-          {prototypeItems.map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemText secondary={text} />
+          {prototypeItems.map((item) => (
+            <ListItem button component={Link} to={item.path} key={item.text}>
+              <ListItemText secondary={item.text} />
             </ListItem>
           ))}
+        </List>
+
+        <Divider></Divider>
+
+        <List>
+          <ListItem button component={Link} to={"/join"} key={"Join an existing Prototype"}>
+            <ListItemText secondary={"Join an existing Prototype"} />
+          </ListItem>
         </List>
 
         <Divider></Divider>
