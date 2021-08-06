@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-import WordTyper from '../../components/WordTyper/WordTyper'
+import { Link } from 'react-router-dom'
 
 import {
   HeadingText,
@@ -10,6 +10,10 @@ import {
 } from '../../GlobalItems'
 
 import Button from '@material-ui/core/Button';
+
+import WordTyper from '../../components/WordTyper/WordTyper'
+
+import AnimatedGears from '../../components/AnimatedGears/AnimatedGears'
 
 //Animate on Scroll
 import Aos from 'aos'
@@ -46,7 +50,7 @@ const Home = () => {
 
       <div data-aos-delay="500" data-aos="fade-left">
         <div>
-          <Button variant="contained" color="primary" style={{width:"20vw", height:"6vh", fontSize:"1.4rem"}}>
+          <Button variant="contained" color="primary" style={{width:"20vw", height:"6vh", fontSize:"1.4rem"}} component={Link} to={'/tasks'}>
             Create Protoype!
           </Button>
         </div>
@@ -54,11 +58,13 @@ const Home = () => {
         <div style={{marginTop:"2vh"}}></div>
 
         <div>
-          <Button variant="contained" color="default" style={{width:"20vw"}}>
+          <Button variant="contained" color="default" style={{width:"20vw"}} component={Link} to={'/join'}>
             I already have a prototype
           </Button>
         </div>
       </div>
+
+      <AnimatedGears></AnimatedGears>
       
 
     </PageWrapper>
