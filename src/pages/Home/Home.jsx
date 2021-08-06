@@ -64,7 +64,9 @@ const Home = () => {
         </div>
       </div>
 
-      <AnimatedGears></AnimatedGears>
+      <div data-aos-delay="750" data-aos="fade-in">
+        <AnimatedGears></AnimatedGears>
+      </div>
       
 
     </PageWrapper>
